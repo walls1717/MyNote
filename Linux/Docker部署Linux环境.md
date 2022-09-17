@@ -26,7 +26,7 @@ character_set_server = utf8
 
 
 
-## 1.1配置MySQL主从复制
+## 1.1主从配置
 
 首先启动两台MySQL容器，注意挂载目录与端口
 
