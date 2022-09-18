@@ -124,7 +124,7 @@ firewall-cmd --zone=public --list-ports
 
 ## 3.1.主从配置
 
-详情见目录下 `MySQL主从配置.md` 
+详情见目录下 [MySQL主从配置](MySQL主从配置.md) 
 
 
 

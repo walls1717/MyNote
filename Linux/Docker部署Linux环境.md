@@ -169,6 +169,12 @@ docker run -d -p 6379:6379 --privileged=true \
 
 
 
+## 2.1主从集群配置
+
+详情见目录下 [Docker配置Redis主从集群](Docker配置Redis主从集群.md) 
+
+
+
 # 3.Tomcat
 
 Tomcat容器运行命令：
