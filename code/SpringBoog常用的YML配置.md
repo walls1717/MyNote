@@ -56,25 +56,24 @@ mybatis-plus:
 
 ```yaml
 spring:
-  datasource:
-    redis:
-      # 主机地址ip
-      host: redis
-      # 端口
-      port: 6379
-      # 密码(默认为空)
-      password:
-      # Redis连接Java的客户端
-      lettuce:
-        pool:
-          # 连接池最大连接数（使用负值表示没有限制）
-          max-active: 10
-          # 连接池中的最大空闲连接
-          max-idle: 10
-          # 连接池最大阻塞等待时间（使用负值表示没有限制）
-          max-wait: -1ms
-          # 连接池中的最小空闲连接
-          min-idle: 1
-          time-between-eviction-runs: 10s
+  redis:
+  # 主机地址ip
+  host: redis
+  # 端口
+  port: 6379
+  # 密码(默认为空)
+  password:
+  # Redis连接Java的客户端
+  lettuce:
+    pool:
+      # 连接池最大连接数（使用负值表示没有限制）
+      max-active: 10
+      # 连接池中的最大空闲连接
+      max-idle: 10
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1ms
+      # 连接池中的最小空闲连接
+      min-idle: 1
+      time-between-eviction-runs: 10s
 ```
 

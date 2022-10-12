@@ -108,6 +108,7 @@
 
 ```xml
 <!-- 对象连接池 -->
+<!-- 可以作为Redis的连接池使用 -->
 <dependency>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-pool2</artifactId>
@@ -116,7 +117,7 @@
 
 
 
-# lombok
+## lombok
 
 ```xml
 <!-- 简化Bean开发 -->
