@@ -16,4 +16,5 @@
 |       ctrl + alt + T | 快速生成try-catch等代码块    |
 |       ctrl + alt + ← | 跳出方法到调用者             |
 |       ctrl + alt + → | 进入方法                     |
-|       ctrl + alt + u | 查看类图                     |
+|       ctrl + alt + U | 查看类图                     |
+|     ctrl + shift + F | 全局搜索(包括文件内容)       |
