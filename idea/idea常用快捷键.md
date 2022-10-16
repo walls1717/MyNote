@@ -18,3 +18,4 @@
 |       ctrl + alt + → | 进入方法                     |
 |       ctrl + alt + U | 查看类图                     |
 |     ctrl + shift + F | 全局搜索(包括文件内容)       |
+|     ctrl + shift + R | 全局搜索 + 全局替换          |
