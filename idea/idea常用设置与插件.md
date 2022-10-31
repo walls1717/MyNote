@@ -8,7 +8,7 @@
 
 
 
-## 2.取消 Tab 页单行显示
+## 2.取消Tab页单行显示
 
 ![image-20220508215452703](https://gitee.com/walls1717/images/raw/master/202210121929886.png)
 
@@ -46,7 +46,7 @@
 
 ![image-20220508220440992](https://gitee.com/walls1717/images/raw/master/202210121929894.png)
 
-## 7.按字母顺序排序tab页
+## 7.按字母顺序排序Tab页
 
 ![image-20221012194036870](https://gitee.com/walls1717/images/raw/master/202210121940182.png)
 

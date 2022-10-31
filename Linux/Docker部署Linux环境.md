@@ -1,3 +1,54 @@
+# 0.安装Docker
+
+首先卸载旧版本Docker(如果未安装过可跳过)：
+
+```bash
+yum remove docker \
+           docker-client \
+           docker-client-latest \
+           docker-common \
+           docker-latest \
+           docker-latest-logrotate \
+           docker-logrotate \
+           docker-engine
+```
+
+安装gcc环境以及所需的软件包：
+
+```bash
+yum -y install gcc
+yum -y install gcc-c++
+yum install -y yum-utils
+```
+
+设置stable镜像仓库以及更新yum软件包索引：
+
+```bash
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+yum makecache fast
+```
+
+安装DockerCE：
+
+```bash
+yum install docker-ce docker-ce-cli containerd.io
+```
+
+Docker设置开机自启状态：
+
+```bash
+# 开启自启
+systemctl enable docker
+# 关闭开机自启
+systemctl disable docker
+```
+
+> Docker安装官方文档
+>
+> https://docs.docker.com/engine/install/centos/
+
+参考文档：[Docker](Docker2022.html)
+
 # 1.MySQL
 
 MySQL容器运行命令：
@@ -24,7 +75,7 @@ character_set_server = utf8
 
 重启MySQL容器 `docker restart mysql` 
 
-
+自动启动MySQL容器 `docker update [容器id或容器名] --restart=always` 
 
 ## 1.1主从配置
 
@@ -163,7 +214,7 @@ docker run -d -p 6379:6379 --privileged=true \
 --name redis redis redis-server /etc/redis/redis.conf
 ```
 
-
+自动启动Redis容器 `docker update [容器id或容器名] --restart=always` 
 
 [^1]:详情查看目录redis.conf文件
 
@@ -199,6 +250,8 @@ mv webapps.dist webapps
 docker run -d -p 8080:8080 --name tomcat8 billygoo/tomcat8-jdk8
 ```
 
+自动启动Tomcat容器 `docker update [容器id或容器名] --restart=always` 
+
 # 4.ElaticSearch
 
 容器运行前置操作：
@@ -229,6 +282,8 @@ docker run --name elasticsearch -p 9200:9200 -p 9300:9300 \
 
 特别注意：-e ES_JAVA_OPTS="-Xms64m -Xmx256m" \ 测试环境下，设置 ES 的初始内存和最大内存，否则导致过大启动不了ES。
 
+自动启动ES容器 `docker update [容器id或容器名] --restart=always` 
+
 ## 1.1 Kibana
 
 Kibana是es的可视化操作程序。
@@ -241,3 +296,4 @@ docker run --name kibana \
 -d kibana:7.4.2
 ```
 
+自动启动Kibana容器 `docker update [容器id或容器名] --restart=always` 
