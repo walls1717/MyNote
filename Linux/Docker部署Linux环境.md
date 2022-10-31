@@ -199,3 +199,45 @@ mv webapps.dist webapps
 docker run -d -p 8080:8080 --name tomcat8 billygoo/tomcat8-jdk8
 ```
 
+# 4.ElaticSearch
+
+容器运行前置操作：
+
+```bash
+# es的配置文件挂载路径
+mkdir -p /mydata/elasticsearch/config
+# es的数据挂载路径
+mkdir -p /mydata/elasticsearch/data
+# 允许所有地址访问
+echo "http.host: 0.0.0.0" >> /mydata/elasticsearch/config/elasticsearch.yml
+# 给读写权限
+chmod -R 777 /mydata/elasticsearch/
+```
+
+ElaticSearch容器运行命令：
+
+```dockerfile
+# 9200端口用于使用es；9300端口用于kibana使用
+docker run --name elasticsearch -p 9200:9200 -p 9300:9300 \
+-e "discovery.type=single-node" \
+-e ES_JAVA_OPTS="-Xms64m -Xmx512m" \
+-v /mydata/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml \
+-v /mydata/elasticsearch/data:/usr/share/elasticsearch/data \
+-v /mydata/elasticsearch/plugins:/usr/share/elasticsearch/plugins \
+-d elasticsearch:7.4.2
+```
+
+特别注意：-e ES_JAVA_OPTS="-Xms64m -Xmx256m" \ 测试环境下，设置 ES 的初始内存和最大内存，否则导致过大启动不了ES。
+
+## 1.1 Kibana
+
+Kibana是es的可视化操作程序。
+
+Kibana容器运行命令：
+
+```dockerfile
+docker run --name kibana \
+-e ELASTICSEARCH_HOSTS=http://[虚拟机ip]:9200 -p 5601:5601 \
+-d kibana:7.4.2
+```
+
