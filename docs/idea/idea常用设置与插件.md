@@ -4,6 +4,10 @@
 
 ![image-20220508215139236](https://gitee.com/walls1717/images/raw/master/202210121929884.png)
 
+<div align="center">   
+    <img src="https://gitee.com/walls1717/images/raw/master/202210121929884.png" style="margin: 0 auto;" />  
+</div>
+
 ![image-20220508215535826](https://gitee.com/walls1717/images/raw/master/202210121929885.png)
 
 
