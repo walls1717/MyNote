@@ -187,7 +187,7 @@ master_connect_retry：连接失败重试的时间间隔，单位为秒。
 
 # 2.Redis
 
-事先拷贝Redis配置文件redis.conf[^1]到宿主机目录下
+事先拷贝Redis配置文件[redis.conf](redis.conf)到宿主机目录下
 
 在宿主机设置redis.conf
 
@@ -209,14 +209,14 @@ Redis容器运行命令：
 
 ```dockerfile
 docker run -d -p 6379:6379 --privileged=true \
--v /app/redis/redis.conf:/etc/redis/redis.conf \
--v /app/redis/data:/data \
+-v /mydata/redis/redis.conf:/etc/redis/redis.conf \
+-v /mydata/redis/data:/data \
 --name redis redis redis-server /etc/redis/redis.conf
 ```
 
 自动启动Redis容器 `docker update [容器id或容器名] --restart=always` 
 
-[^1]:详情查看目录redis.conf文件
+
 
 
 
@@ -249,6 +249,10 @@ mv webapps.dist webapps
 使用billygoo/tomcat8-jdk8镜像构建容器
 docker run -d -p 8080:8080 --name tomcat8 billygoo/tomcat8-jdk8
 ```
+
+将虚拟机中的文件复制到容器的webapps中：
+
+ `docker cp 虚拟机中文件 容器id:/usr/local/tomcat/webapps` 
 
 自动启动Tomcat容器 `docker update [容器id或容器名] --restart=always` 
 
@@ -297,3 +301,22 @@ docker run --name kibana \
 ```
 
 自动启动Kibana容器 `docker update [容器id或容器名] --restart=always` 
+
+# 5.RabbitMQ
+
+RabbitMQ容器运行命令：
+
+```bash
+docker run -d --name rabbitmq \
+-p 5671:5671 -p 5672:5672 \
+-p 4369:4369 -p 15671:15671 \
+-p 15672:15672 rabbitmq:management
+
+# 端口说明
+4369,25672(Erlan发现&集群端口)
+5672,5671(AMQP端口)
+15672(web管理后台端口)
+61613,61674(STOMP协议端口)
+1883,8883(MQTT协议端口)
+```
+
