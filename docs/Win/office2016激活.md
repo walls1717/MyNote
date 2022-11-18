@@ -2,11 +2,11 @@
 
 1. 首先查看Office2016安装目录在哪里，如果是默认安装，没有修改路径，是在 `C:\Program Files\Microsoft Office\Office16 `目录下，64位系统装32位office路径是 `C:\Program Files (x86)\Microsoft Office\Office16`，具体路径还得自行查看；
 
-   ![image-20200809132805374](https://gitee.com/walls1717/images/raw/master/202210121924036.png)
+   ![image-20200809132805374](https://raw.githubusercontent.com/walls1717/image/master/202210121924036.png)
 
 2. 接着右键点击开始图标，选择【Windows PowerShell(管理员)】，或者【命令提示符(管理员)】；
 
-   ![image-20200809132830948](https://gitee.com/walls1717/images/raw/master/202210121924037.png)
+   ![image-20200809132830948](https://raw.githubusercontent.com/walls1717/image/master/202210121924037.png)
 
 3. 打开命令提示符，复制这个命令，在命令窗口鼠标右键，会自动粘贴，按回车进入office2016安装路径，如果你不是在这个目录，需手动修改，目录错误，后面就无法执行激活操作；
 
@@ -28,7 +28,7 @@
    【Office Standard 2016：JNRGM-WHDWX-FJJG3-K47QV-DRTFM】
    ```
 
-   ![image-20200809133008723](https://gitee.com/walls1717/images/raw/master/202210121924038.png)
+   ![image-20200809133008723](https://raw.githubusercontent.com/walls1717/image/master/202210121924038.png)
 
 5. 接着复制这个命令，右键自动粘贴，按回车执行，设置kms服务器；
 
@@ -38,19 +38,19 @@
 
    `cscript ospp.vbs /act`
 
-   ![image-20200809133134184](https://gitee.com/walls1717/images/raw/master/202210121924039.png)
+   ![image-20200809133134184](https://raw.githubusercontent.com/walls1717/image/master/202210121924039.png)
 
 7. 如果要查询office2016激活状态，执行这个命令。
 
    `cscript ospp.vbs /dstatus`
 
-   ![image-20200809133116108](https://gitee.com/walls1717/images/raw/master/202210121924040.png)
+   ![image-20200809133116108](https://raw.githubusercontent.com/walls1717/image/master/202210121924040.png)
 
    也可以记录下来自己的 SKU ID ，输入 `slmgr /xpr d450596f-894d-49e0-966a-fd39ed4c4c64` 查看具体到期时间。
 
-   ![image-20200809133638841](https://gitee.com/walls1717/images/raw/master/202210121924041.png)
+   ![image-20200809133638841](https://raw.githubusercontent.com/walls1717/image/master/202210121924041.png)
 
-   ![image-20200809133620009](https://gitee.com/walls1717/images/raw/master/202210121924042.png)
+   ![image-20200809133620009](https://raw.githubusercontent.com/walls1717/image/master/202210121924042.png)
 
 ## 激活密钥（可以尝试）
 

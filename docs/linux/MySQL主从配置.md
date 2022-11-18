@@ -2,8 +2,6 @@
 
 在Vmware中创建两台Linux虚拟机，如果已经配置过一个Linux虚拟机，则可以直接克隆这个虚拟机，克隆完之后修改虚拟机的IP地址，并重启网络服务。
 
-<img src="https://gitee.com/walls1717/images/raw/master/202208311313527.png" alt="image-20220619110259933" style="zoom:50%;" />
-
 # 2. 修改MySQL的UUID
 
 因为是克隆的虚拟机，所以MySQL的UUID也是一致的，这会导致后面启动slave线程失败。
@@ -12,13 +10,13 @@
 
    `select uuid();`
 
-   <img src="https://gitee.com/walls1717/images/raw/master/202208311313969.png" alt="image-20220619110744494" style="zoom: 67%;" />
+   <img src="https://raw.githubusercontent.com/walls1717/image/master/202208311313969.png" alt="image-20220619110744494" style="zoom: 67%;" />
 
 2. 查看配置文件目录
 
    `show variables like 'datadir';`
 
-   <img src="https://gitee.com/walls1717/images/raw/master/202208311314024.png" alt="image-20220619110850670" style="zoom:67%;" />
+   <img src="https://raw.githubusercontent.com/walls1717/image/master/202208311314024.png" alt="image-20220619110850670" style="zoom:67%;" />
 
 3. 编辑配置文件
 
@@ -26,7 +24,7 @@
 
    将UUID替换为之前新生成的UUID
 
-   <img src="https://gitee.com/walls1717/images/raw/master/202208311314304.png" alt="image-20220619110956228" style="zoom:67%;" />
+   <img src="https://raw.githubusercontent.com/walls1717/image/master/202208311314304.png" alt="image-20220619110956228" style="zoom:67%;" />
 
 4. 重启服务
 
@@ -52,7 +50,7 @@
 
    如果在执行此sql出现如下报错，就需要修改密码的检查等级。
 
-   ![image-20220619111402342](https://gitee.com/walls1717/images/raw/master/202208311314104.png)
+   ![image-20220619111402342](https://raw.githubusercontent.com/walls1717/image/master/202208311314104.png)
 
    ```
    set global validate_password_policy=0; (设置密码检查等级为LOW)
@@ -64,7 +62,7 @@
 
    `show master status;`
 
-   ![image-20220619111554653](https://gitee.com/walls1717/images/raw/master/202208311314768.png)
+   ![image-20220619111554653](https://raw.githubusercontent.com/walls1717/image/master/202208311314768.png)
 
    这里要记录下来File和Position的信息，并且不能再对这个MySQL有任何操作，一旦有操作，此信息就会发生变化。
 
@@ -89,4 +87,4 @@
 
 执行 `show slave status;` 查看线程是否成功运行，这里如果是YES则运行成功。
 
-![image-20220619111953554](https://gitee.com/walls1717/images/raw/master/202208311314901.png)
+![image-20220619111953554](https://raw.githubusercontent.com/walls1717/image/master/202208311314901.png)

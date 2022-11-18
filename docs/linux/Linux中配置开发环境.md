@@ -46,7 +46,7 @@ firewall-cmd --zone=public --list-ports
    rpm -qa | grep mariadb (centOS一般自带这个)
    ```
 
-   ![image-20220616115515947](https://gitee.com/walls1717/images/raw/master/image-20220616115515947.png)
+   ![image-20220616115515947](https://raw.githubusercontent.com/walls1717/image/master/image-20220616115515947.png)
 
    这个就代表系统已经安装mariadb，这个与MySQL有冲突，需要卸载
 
@@ -96,7 +96,7 @@ firewall-cmd --zone=public --list-ports
    cat /var/log/mysqld.log | grep password (查看此文件包含password的行信息)
    ```
 
-   ![image-20220616121712150](https://gitee.com/walls1717/images/raw/master/image-20220616121712150.png)
+   ![image-20220616121712150](https://raw.githubusercontent.com/walls1717/image/master/image-20220616121712150.png)
 
    获取到临时密码后，根据临时密码登录MySQL，并修改密码
 
@@ -174,7 +174,7 @@ vim redis.conf 编辑redis配置文件
 输入/dae搜索找到 daemonize 将后面改为yes
 ```
 
-![image-20220616194459628](https://gitee.com/walls1717/images/raw/master/image-20220616194459628.png)
+![image-20220616194459628](https://raw.githubusercontent.com/walls1717/image/master/image-20220616194459628.png)
 
 设置redis密码：
 
@@ -184,7 +184,7 @@ vim redis.conf 编辑redis配置文件
 输入/pass搜索找到 requirepass 取消注释，在后面添加密码
 ```
 
-![image-20220616194302385](https://gitee.com/walls1717/images/raw/master/image-20220616194302385.png)
+![image-20220616194302385](https://raw.githubusercontent.com/walls1717/image/master/image-20220616194302385.png)
 
 开启redis远程连接
 
@@ -195,7 +195,7 @@ vim redis.conf 编辑redis配置文件
 
 
 
-![image-20220616194549291](https://gitee.com/walls1717/images/raw/master/image-20220616194549291.png)
+![image-20220616194549291](https://raw.githubusercontent.com/walls1717/image/master/image-20220616194549291.png)
 
 启动redis
 

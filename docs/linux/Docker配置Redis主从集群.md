@@ -34,7 +34,7 @@ redis-cli --cluster create
 --cluster-replicas 1
 ```
 
-![image-20220918110714973](https://gitee.com/walls1717/images/raw/master/202209181107399.png)
+![image-20220918110714973](https://raw.githubusercontent.com/walls1717/image/master/202209181107399.png)
 
 进入Redis客户端查看集群状态 `redis-cli -p 6381` 
 
@@ -62,7 +62,7 @@ redis-cli --cluster check 自己ip:6381
 
 将新增的6387节点作为master节点加入原集群 `redis-cli --cluster add-node 自己实际IP地址:6387 自己实际IP地址:6381` 
 
-![image-20220918165611520](https://gitee.com/walls1717/images/raw/master/202209181656929.png)
+![image-20220918165611520](https://raw.githubusercontent.com/walls1717/image/master/202209181656929.png)
 
 重新分配槽号 `redis-cli --cluster reshard 192.168.111.147:6381` 这里会输入几条参数，如图
 
@@ -73,11 +73,11 @@ id：6387的节点id(通过check可查询到)
 all：使用所有节点作为哈希槽的源节点
 ```
 
-![image-20220918165808354](https://gitee.com/walls1717/images/raw/master/202209181658823.png)
+![image-20220918165808354](https://raw.githubusercontent.com/walls1717/image/master/202209181658823.png)
 
 为主节点分配从节点 `redis-cli --cluster add-node ip:新slave端口 ip:新master端口 --cluster-slave --cluster-master-id 新主机节点ID` 
 
-![image-20220918170316815](https://gitee.com/walls1717/images/raw/master/202209181703685.png)
+![image-20220918170316815](https://raw.githubusercontent.com/walls1717/image/master/202209181703685.png)
 
 
 
@@ -96,6 +96,6 @@ id：接手槽位的节点id
 node：分配槽位的节点id
 ```
 
-![image-20220918172137600](https://gitee.com/walls1717/images/raw/master/202209181721200.png)
+![image-20220918172137600](https://raw.githubusercontent.com/walls1717/image/master/202209181721200.png)
 
 干掉6387节点 `redis-cli --cluster del-node 192.168.111.147:6387 6387节点id` 

@@ -8,7 +8,7 @@
 
 可以设置在 Maven 加载 jar 包的时候同时加载 sources
 
-![image-20220520091511994](https://gitee.com/walls1717/images/raw/master/202210121942677.png)
+![image-20220520091511994](https://raw.githubusercontent.com/walls1717/image/master/202210121942677.png)
 
 这样 sources 会下载到本地仓库对应的AVG当中
 
@@ -18,7 +18,7 @@
 
 项目已经创建的话，可以直接下载 sources
 
-![image-20220520091722282](https://gitee.com/walls1717/images/raw/master/202210121942679.png)
+![image-20220520091722282](https://raw.githubusercontent.com/walls1717/image/master/202210121942679.png)
 
 这样也能实现查看到 `.java` 
 

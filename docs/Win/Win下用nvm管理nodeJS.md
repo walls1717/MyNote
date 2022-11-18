@@ -8,11 +8,11 @@ nvm可以实现nodeJS的多版本控制
 
 这里指定nvm的路径，路径不要有空格与中文
 
-![](https://gitee.com/walls1717/images/raw/master/202210121033292.png)
+![](https://raw.githubusercontent.com/walls1717/image/master/202210121033292.png)
 
 这里指定nodeJS的路径，路径不要有空格与中文，尽量不要与nvm在同一目录下
 
-![image-20221012103600141](https://gitee.com/walls1717/images/raw/master/202210121036904.png)
+![image-20221012103600141](https://raw.githubusercontent.com/walls1717/image/master/202210121036904.png)
 
 安装完成之后以管理员身份运行cmd，设置国内镜像源
 
