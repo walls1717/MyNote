@@ -1,10 +1,10 @@
 ### linux
 
-- [Docker部署Linux环境](./linux/Docker部署Linux环境.md)
-- [Docker配置Redis主从集群](./linux/Docker配置Redis主从集群.md)
-- [Linux中配置开发环境](./linux/Linux中配置开发环境.md)
-- [MySQL主从配置](./linux/MySQL主从配置.md)
-- [redis.conf](./linux/redis.conf)
+- [Docker部署Linux环境](./Linux/Docker部署Linux环境.md)
+- [Docker配置Redis主从集群](./Linux/Docker配置Redis主从集群.md)
+- [Linux中配置开发环境](./Linux/Linux中配置开发环境.md)
+- [MySQL主从配置](./Linux/MySQL主从配置.md)
+- [redis.conf](./Linux/redis.conf)
 
 ### code
 
@@ -19,9 +19,9 @@
 
 ### Win
 
-- [office2016激活](win/office2016激活.md)
-- [win10批量激活](win/win10批量激活.md)
-- [Win下用nvm管理nodeJS](win/Win下用nvm管理nodeJS.md)
+- [office2016激活](./Win/office2016激活.md)
+- [win10批量激活](./Win/win10批量激活.md)
+- [Win下用nvm管理nodeJS](./Win/Win下用nvm管理nodeJS.md)
 
 
 
