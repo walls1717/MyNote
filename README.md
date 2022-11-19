@@ -1,10 +1,10 @@
 ### linux
 
-- [Docker部署Linux环境](linux/Docker部署Linux环境.md)
-- [Docker配置Redis主从集群](linux/Docker配置Redis主从集群.md)
-- [Linux中配置开发环境](linux/Linux中配置开发环境.md)
-- [MySQL主从配置](linux/MySQL主从配置.md)
-- [redis.conf](linux/redis.conf)
+- [Docker部署Linux环境](./linux/Docker部署Linux环境.md)
+- [Docker配置Redis主从集群](./linux/Docker配置Redis主从集群.md)
+- [Linux中配置开发环境](./linux/Linux中配置开发环境.md)
+- [MySQL主从配置](./linux/MySQL主从配置.md)
+- [redis.conf](./linux/redis.conf)
 
 ### code
 
