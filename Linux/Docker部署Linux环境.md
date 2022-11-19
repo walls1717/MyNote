@@ -157,7 +157,7 @@ read_only=1
 
 在**主数据库**中查看主从同步状态 `show master status;` 记录下图中信息，之后要用到
 
-![image-20220917104935621](https://gitee.com/walls1717/images/raw/master/202209171050677.png)
+![image-20220917104935621](https://raw.githubusercontent.com/walls1717/image/master/202209171050677.png)
 
 进入**从数据库**容器并进入MySQL控制台 `docker exec -it mysql-slave /bin/bash` 
 
@@ -177,11 +177,11 @@ master_connect_retry：连接失败重试的时间间隔，单位为秒。
 
 在**从数据库**中查看主从同步状态 `show slave status \G;` 可以看看配置的是否与刚刚输入的命令一致，主要看图中红框中的配置，No代表没有开启主从同步
 
-![image-20220917110633802](https://gitee.com/walls1717/images/raw/master/202209171106809.png)
+![image-20220917110633802](https://raw.githubusercontent.com/walls1717/image/master/202209171106809.png)
 
 输入命令 `start slave;` 再次查看主从同步状态，可以看到主从同步已开启
 
-![image-20220917110836045](https://gitee.com/walls1717/images/raw/master/202209171108055.png)
+![image-20220917110836045](https://raw.githubusercontent.com/walls1717/image/master/202209171108055.png)
 
 
 

@@ -4,11 +4,11 @@
 
 使用 `win+R` 调出运行。
 
-![image-20200809121400530](https://gitee.com/walls1717/images/raw/master/202210121925855.png)
+![image-20200809121400530](https://raw.githubusercontent.com/walls1717/image/master/202210121925855.png)
 
 输入 `slmgr.vbs -xpr` 查看激活剩余时间。
 
-![image-20200809121515617](https://gitee.com/walls1717/images/raw/master/202210121925857.png)
+![image-20200809121515617](https://raw.githubusercontent.com/walls1717/image/master/202210121925857.png)
 
 
 
@@ -16,7 +16,7 @@
 
 1. 打开cmd管理员模式
 
-   ![image-20200809121740123](https://gitee.com/walls1717/images/raw/master/202210121925858.png)
+   ![image-20200809121740123](https://raw.githubusercontent.com/walls1717/image/master/202210121925858.png)
 
 2. 如果之前已经有产品密钥的可以先卸载，在 cmd 中输入 `slmgr.vbs /upk` 
 
@@ -32,9 +32,9 @@
 
 5. 最后输入 `slmgr /ato` 完成激活
 
-   ![image-20200809122656435](https://gitee.com/walls1717/images/raw/master/202210121925859.png)
+   ![image-20200809122656435](https://raw.githubusercontent.com/walls1717/image/master/202210121925859.png)
 
-![image-20200809122725930](https://gitee.com/walls1717/images/raw/master/202210121925860.png)
+![image-20200809122725930](https://raw.githubusercontent.com/walls1717/image/master/202210121925860.png)
 
 
 
